@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+    /* Primary */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients background */
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+
+    /* Gradients circle */
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px 40px 0px rgba(200, 199, 255, 0.6);
+    height: 375px;
+    width: min(100%, 500px);
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.card__item-results,
+.card__item-summary {
+    border-radius: 1.5rem;
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+
+.card__item-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(180deg, hsla(252, 100%, 67%, 1) 0%, hsla(241, 81%, 54%, 1) 100%);
+}
+
+.card__title {
+    color: var(--lightLavender);
+    font-size: 1.1rem;
+}
+
+.card__circle {
+    background: linear-gradient(0deg, hsla(241, 72%, 46%, 0) 0%, hsla(256, 72%, 46%, 1) 100%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__points {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 95%;
+}
+
+.card__total-points {
+    color: var(--lightLavender);
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+.card__subTitle {
+    color: var(--paleBlue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    color: var(--lightLavender);
+    font-size: 0.8rem;
+    width: 180px;
+}
+
+.card__item-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #fff;
+}
+
+.card__title-summary {
+    color: var(--darkGrayBlue);
+    font-size: 1.1rem;
+}
+
+.card-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.card-summary--red {
+    background: hsla(0, 100%, 67%, 0.1);
+    color: var(--lightRed);
+}
+
+.card-summary--yellow {
+    background: hsla(39, 100%, 56%, 0.1);
+    color: var(--orangeyYellow);
+}
+.card-summary--green {
+    background: hsla(166, 100%, 37%, 0.1);
+    color: var(--greenTeal);
+}
+.card-summary--blue {
+    background: hsla(234, 85%, 45%, 0.1);
+    color: var(--cobaltBlue);
+}
+
+.card-summary__content {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: 0.8rem;
+}
+
+.card-summary__text {
+    font-weight: 800;
+}
+
+.card-summary__results {
+    color: var(--darkGrayBlue);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-summary__total {
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+.card__button {
+    background: var(--darkGrayBlue);
+    border: none;
+    border-radius: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.8rem 0;
+    outline: none;
+    font-weight: 700;
+    font-size: 0.75rem;
+    transition: all 0.4s ease;
+}
+
+.card__button:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 450px) {
+    .card {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .card__item-results {
+        height: 50%;
+        width: 100%;
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+
+    .card__circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card__text {
+        width: 210px;
+    }
+
+    .card__subTitle {
+        margin-bottom: 0.4rem;
+    }
+
+    .card__item-summary {
+        height: 60%;
+        width: 100%;
+        padding: 1rem;
+    }
+}
